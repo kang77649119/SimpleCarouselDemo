@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CarouseVM: NSObject {
+class CarouselVM: NSObject {
     
-    var carouseArray:[CarouseModel]?
+    var carouselArray:[CarouselModel]?
     
     func loadData(finishedCallBack:@escaping ()->()) {
         
@@ -28,10 +28,10 @@ class CarouseVM: NSObject {
                 return
             }
             
-            self.carouseArray = [CarouseModel]()
+            self.carouselArray = [CarouselModel]()
             
             for obj in dataArray {
-                self.carouseArray!.append(CarouseModel(dict: obj))
+                self.carouselArray!.append(CarouselModel(dict: obj))
             }
             
             finishedCallBack()

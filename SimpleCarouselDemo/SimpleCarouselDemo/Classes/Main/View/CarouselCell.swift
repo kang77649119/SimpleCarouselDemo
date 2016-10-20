@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CarouselCell: UICollectionViewCell {
+    
+    @IBOutlet weak var img: UIImageView!
 
+    var carouselModel : CarouselModel? {
+    
+        didSet {
+            let url = URL(string: carouselModel!.pic_url)
+            self.img.sd_setImage(with: url)
+        }
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }

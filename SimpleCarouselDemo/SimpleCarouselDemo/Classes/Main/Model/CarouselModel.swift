@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CarouseModel: NSObject {
+class CarouselModel: NSObject {
     
     var pic_url : String = ""
     
